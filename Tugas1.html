@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TugasPAM-1</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        width: 653;
+        height: 280;}
+    th, td {
+        border: 2px solid #cccccccc;
+        padding: 5px;
+    }
+    th {
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: cornflowerblue;
+    }
+    tr:nth-child(even){
+        background-color: #dddddddd;
+    }
+    tr :hover{
+        background-color: black;
+        color: white;
+    }
+</style>
+<script>
+    function grade (x){
+        if (x>=80){return "A"}
+        else if (x>=70 && x <80){return "AB"}
+        else if (x>=60 && x <70){return "B"}
+        else if (x>=50 && x <60){return "BC"}
+        else if (x>=40 && x <50){return "C"}
+        else if (x>=10 && x <40){return "D"}
+        else if (x<10){return "E"}
+      }
+    let outputHTML = "";
+    let nama = ["Boy", "Adi", "Ade", "Zoin", "Ras", "Bangun", "Teger", "Zoin", "ZOzo", "Xyzenn"];
+    let nim = ["120", "122", "124", "156", "333", "555", "127", "128", "155", "144"];
+    let nilai = [20, 89, 90, 56, 77, 43, 78, 65, 45, 2];
+
+    window.onload = () =>{
+        loaddata(nama, nim, nilai)
+    }
+
+    function loaddata(nama, nim ,nilai){
+        const tablebody = document.getElementById("table");
+        for (var i = 0;i<nama.length;i++){
+            outputHTML += "<tr>"
+                outputHTML += "<td>" + (i+1) + "</td>";
+                outputHTML += "<td>" + nama[i] + "</td>";
+                outputHTML += "<td>" + nim[i] + "</td>";
+                outputHTML += "<td>" + nilai[i] + "</td>";
+                outputHTML += "<td>" + grade(nilai[i]) + "</td>";
+            outputHTML += "</tr>"}
+        console.log(outputHTML)
+        tablebody.innerHTML = outputHTML}  
+</script>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Nilai</th>
+                <th>Huruf Mutu</th>
+            </tr>
+        </thead>
+        <tbody id = "table"></tbody>
+    </table>
+</body>
+</html>
