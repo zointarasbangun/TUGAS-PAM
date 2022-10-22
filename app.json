@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "tugas3_120140048",
+    "slug": "tugas3_120140048",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c6bb9fb6-a4e9-4c1f-bf7c-b582eefeefc3"
+      }
+    }
+  },
+  "name": "tugas3_120140048"
+}
